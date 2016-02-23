@@ -1,0 +1,21 @@
+.game_screen{
+/*    background: blue;*/
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.game_text_container{
+    height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 15px;
+    background: grey;
+}
+
+/*starting from 600px and more*/
+@media screen and (max-width: 700px) {
+    .game_screen{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

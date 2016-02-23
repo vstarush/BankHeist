@@ -1,5 +1,28 @@
+<!--
 <br>
 <br>
 <a href="#/">To Start</a>
 <br>
 <p>This is a Game Screen  {{ testMessage }}</p>
+
+
+-->
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<button ng-click="ActivateInterval()">Add Number</button>
+
+
+<!--
+<div class="container game_screen">
+    <div class="container game_text_container"> Hello </div>
+    <div class="container game_text_container"> Hello </div>
+    <div class="container game_text_container"> Hello </div>
+    <div class="container game_text_container"> Hello </div>
+    <div class="container game_text_container"> Hello </div>
+</div>
+-->
+
+<br>
+
+<div class="container game_screen" ng-repeat="number in numbers">
+    <div class="container game_text_container animated fadeInUp"> {{ number }} </div>
+</div>
