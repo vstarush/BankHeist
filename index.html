@@ -14,9 +14,12 @@
         <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" />
         <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css" />
         <link rel="stylesheet" href="dist/css/mobile-angular-ui-desktop.min.css" />
+        <link rel="stylesheet" href="dist/css/animate.css" />
+        
+        
         
         <link rel="stylesheet" href="app.css" />
-        
+        <link rel="stylesheet" href="game/scrGame/srcGame.css"/>
         
         
     </head>
