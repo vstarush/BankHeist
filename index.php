@@ -23,7 +23,7 @@
         
         
     </head>
-    <body ng-app="MobileAngularUiExamples" ng-controller="MainController" ui-prevent-touchmove-defaults>
+    <body ng-app="MobileAngularUiExamples" ng-controller="MainController">
         
           <ng-view></ng-view>
         
