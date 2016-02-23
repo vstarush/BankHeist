@@ -10,11 +10,13 @@ app.controller('scrGameController', function($rootScope, $scope){
         counter+=1;
         $scope.$apply();
         var all_game_containers = document.getElementsByClassName('game_text_container');
-        all_game_containers[all_game_containers.length-1].scrollIntoView();
+        var last_element = all_game_containers[all_game_containers.length-1];
+        //$(last_element).scrollIntoView();
+        last_element.scrollIntoView();
     };
     
     $scope.ActivateInterval = function(){
-        setInterval($scope.AddNumber,4000);
+        setInterval($scope.AddNumber,1000);
     }
 });
 

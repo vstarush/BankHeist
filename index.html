@@ -30,9 +30,13 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
         <script src="dist/js/mobile-angular-ui.min.js"></script>
+<!--        <script src="dist/js/jquery_2.13.js"></script>-->
+        
         
         <!-- Required to use $touch, $swipe, $drag and $translate services -->
         <script src="dist/js/mobile-angular-ui.gestures.min.js"></script>
+<!--        <script src="dist/js/scrollintoView.js"></script>-->
+        
         <script src="app.js"></script>
         
         <script src="game/scrGame/scrGame.controller.js"></script>
