@@ -16,7 +16,7 @@ app.controller('scrGameController', function($rootScope, $scope){
     };
     
     $scope.ActivateInterval = function(){
-        setInterval($scope.AddNumber,1000);
+        setInterval($scope.AddNumber,4000);
     }
 });
 
