@@ -5,16 +5,13 @@
 }
 
 .game_text_container{
-    height: 60px;
-/*
-    padding-left: 50px;
-    padding-right: 50px;
-*/
-    margin-bottom: 15px;
-    background: red;
+    height: 100px;
+/*    background: red;*/
 }
 
 .game_text{
+    height: 85px;
+    width: 100%;
     background: yellow;
 }
 
@@ -24,4 +21,39 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+}
+
+/*---------------------- ANIMATION REDEFINE -----------------*/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
