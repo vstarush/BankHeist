@@ -5,10 +5,16 @@
 }
 
 .game_text_container{
-    height: 100px;
+/*    height: 150px;*/
+/*
     padding-left: 50px;
     padding-right: 50px;
+*/
     margin-bottom: 15px;
+    background: red;
+}
+
+.game_text{
     background: yellow;
 }
 
