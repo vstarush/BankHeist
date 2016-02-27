@@ -2,102 +2,83 @@ app.controller('scrGameController', function($rootScope, $scope){
     
     $scope.completed_scenes = [];
 
-    function game_function(scene){
+    $scope.game_function = function(scene){
+        // checks if previous scene was a choice and if yes hides the buttons
+        if($scope.completed_scenes.length>1 && $scope.completed_scenes[$scope.completed_scenes.length-1].hide_options !== undefined){
+            $scope.completed_scenes[$scope.completed_scenes.length-1].hide_options();
+        }
         
+        // pushes scenes to the array of played scenes
         $scope.completed_scenes.push(scene);
-        //$scope.$apply();
-        //console.log($scope.completed_scenes.length);
         
+        //checks if the scene is final or is a choice or is a simple since
         if(scene.next_scene() === 'end'){
             return 'end';
+        }
+        else if(scene.next_scene() === 'choice'){   
+        }
+        else{
+            setTimeout(function(){
+                $scope.game_function(scene.next_scene())
+                $scope.$apply();
+            },scene.scene_timeout);
         }
         
 //        var all_game_containers = document.getElementsByClassName('game_text_container');
 //        var last_element = all_game_containers[all_game_containers.length-1];
 //        last_element.scrollIntoView();
-        
-        setTimeout(function(){
-            game_function(scene.next_scene())
-            $scope.$apply();
-        },scene.scene_timeout);        
+                     
     }
     
+    // starts the game
     $scope.start_game = function(){
-        game_function(test_scene);
+        $scope.game_function(test_scene);
     };
     
     
-    
-      
     var test_scene = {
-        scene_id:1,
-        next_scene:function(){
-            return test_scene_2;
-        },
+        next_scene:function(){return test_scene_2;},
         scene_type:'simple',
         scene_text:'He killed that mutherfucker and dumped the body in a near by river',
         scene_timeout:4000
     };
     
     var test_scene_2 = {
-        scene_id:2,
-        next_scene:function(){
-            return test_scene_3;
-        },
-        scene_type:'simple',
+        next_scene:function(){return test_scene_3;},
         scene_text:'The police had no idea where to start the investigation',
         scene_timeout:2000
     };
     
     var test_scene_3 = {
-        scene_id:3,
-        next_scene:function(){
-            return 'end';
-        },
-        scene_type:'simple',
+        next_scene:function(){return test_scene_choice;},
         scene_text:'The search brought no results',
         scene_timeout:2000
     };
     
+    var test_scene_choice = {
+        next_scene:function(){return 'choice';},
+        scene_text:'What should they do?',
+        scene_timeout:2000,
+        choice_one_text:'End Search',
+        choice_two_text:'Continue Search',
+        choice_one:function(){return test_scene_4;},
+        choice_two:function(){return test_scene_5;},
+        hide_options:function(){
+            this.choice_one_text = '';
+            this.choice_two_text = '';
+        }
+    };
+    
+    var test_scene_4 = {
+        next_scene:function(){return 'end';},
+        scene_text:'The search brought no results',
+        scene_timeout:2000
+    };
+    
+    var test_scene_5 = {
+        next_scene:function(){return 'end';},
+        scene_text:'The search brought no resultsbut they kept on searching and finally found the body',
+        scene_timeout:2000
+    };
+    
 });
-
-
-
-//$scope.testMessage = 'This is Game Test';
-
-    //var scene_counter = 0;
-    
-//    $scope.AddNumber = function(current_scene){
-//        $scope.completed_scenes.push(current_scene);
-//        //counter+=1;
-//        $scope.$apply();
-//        var all_game_containers = document.getElementsByClassName('game_text_container');
-//        var last_element = all_game_containers[all_game_containers.length-1];
-//        last_element.scrollIntoView();
-//    };
-
-
-//    $scope.ActivateInterval = function(){
-//        setInterval($scope.AddNumber(),4000);
-//    }
-
-/*
-SceneName = {
-    callToAction:'',
-    choiceType:'',
-    description:'',
-    nextSceneOne:'',
-    nextSceneTwo:'',
-    showTimeOut:''
-}
-
-CurrentScene = SceneName;
-
-function playgame(){
-    
-}
-
-function call(scene){
-    
-}
-*/
