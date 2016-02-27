@@ -8,14 +8,14 @@
 
 -->
 
-<button style="margin:15px;" class="btn btn-default" ng-click="ActivateInterval()">Add Number</button>
+<button style="margin:15px;" class="btn btn-default" ng-click="start_game()">Add Number</button>
 
 <br>
 
-<div class="container game_screen" ng-repeat="number in numbers">
+<div class="container game_screen" ng-repeat="scene in completed_scenes ">
     <div class="container game_text_container">
         <p class="game_text animated fadeInUp">
-            {{ number }}
+            {{ scene.scene_text }}
         </p>
     </div>
 </div>
