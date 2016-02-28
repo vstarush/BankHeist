@@ -12,11 +12,17 @@
 
 <br>
 
+<p style="margin:15px;">Shots available: {{ bullets }}</p>
+
+<br>
+
 <div class="container game_screen" ng-repeat="scene in completed_scenes ">
     <div class="container game_text_container">
-        <p class="game_text animated fadeInUp">
-            {{ scene.scene_text }}
-        </p>
+        <div class="game_text animated fadeInUp">
+            <p>{{ scene.scene_text }}</p>
+            <p ng-show="scene.gamble_border"> This is a gamble border{{ scene.gamble_border }}</p>
+            <p ng-show="scene.scene_type ==='result_scene'">{{ animation_trigger }}</p>
+        </div>
         <button ng-show="scene.choice_one_text" ng-click="game_function(scene.choice_one())">{{scene.choice_one_text}}</button>
         <button ng-show="scene.choice_two_text" ng-click="game_function(scene.choice_two())">{{scene.choice_two_text}}</button>
     </div>
