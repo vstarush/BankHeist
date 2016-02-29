@@ -3,38 +3,47 @@ app.factory('testGame',function($rootScope){
     var test_scene = {
             next_scene:function(){return test_scene_2;},
             scene_type:'simple',
-            scene_text:'He killed that mutherfucker and dumped the body in a near by river',
-            scene_timeout:2000
+            scene_text:'He killed that mutherfucker and dumped the body in a near by river'
         };
     
     var test_scene_2 = {
+            next_scene:function(){return test_scene_7;},
+            scene_text:'The police had no idea where to start the investigation'
+        };
+    
+    var test_scene_7 = {
+            next_scene:function(){return test_scene_8;},
+            scene_text:'The police had no idea where to start the investigation_7'
+        };
+    
+    var test_scene_8 = {
+            next_scene:function(){return test_scene_9;},
+            scene_text:'The police had no idea where to start the investigation_8'
+        };
+    
+    var test_scene_9 = {
             next_scene:function(){return test_scene_3;},
-            scene_text:'The police had no idea where to start the investigation',
-            scene_timeout:2000
+            scene_text:'The police had no idea where to start the investigation_9'
         };
     
     var test_scene_3 = {
             next_scene:function(){return test_scene_gamble;},
-            scene_text:'He is going at them with a gun. What should they do?',
-            scene_timeout:2000
+            scene_text:'He is going at them with a gun. What should they do?'
         };
     
     var test_scene_4 = {
         next_scene:function(){return 'end';},
         scene_text:'They killed him',
-        scene_timeout:2000
     };
     
     var test_scene_5 = {
         next_scene:function(){return 'end';},
-        scene_text:'He killed you',
-        scene_timeout:2000
+        scene_text:'He killed you'
     };
     
     var test_scene_choice = {
         next_scene:function(){return 'choice';},
         scene_text:'What should they do?',
-        scene_timeout:2000,
         choice_one_text:'End Search',
         choice_two_text:'Continue Search',
         choice_one:function(){return test_scene_4;},
@@ -50,7 +59,6 @@ app.factory('testGame',function($rootScope){
         scene_text:'What should they do?',
         choice_one_text:'Kill that mutherfucker with 2 shots',
         choice_two_text:'Capture him with bear hands',
-        scene_timeout:2000,
         gamble_border:8,
         bullets_price:3,
         scene_win:function(){return test_scene_4;},

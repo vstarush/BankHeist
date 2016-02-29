@@ -1,4 +1,4 @@
-app.controller('scrGameController', function($rootScope,$scope,testGame){
+app.controller('scrGameController', function($rootScope,$scope,$location, $anchorScroll,testGame){
     
     $scope.completed_scenes = [];
     $rootScope.bullets = 5;
@@ -20,6 +20,10 @@ app.controller('scrGameController', function($rootScope,$scope,testGame){
         // pushes scenes to the array of played scenes
         $scope.completed_scenes.push(scene);
         
+        //scrolling to the last element in array
+        $location.hash($scope.completed_scenes.length-1);
+        $anchorScroll();
+        
         //checks if the scene is final or is a choice or is a simple since
         if(scene.next_scene() === 'end'){
             
@@ -33,19 +37,24 @@ app.controller('scrGameController', function($rootScope,$scope,testGame){
             setTimeout(function(){
                 $scope.game_function(scene.next_scene())
                 $scope.$apply();
-            },scene.scene_timeout);
+            },10000);
         }
         else{
             setTimeout(function(){
                 $scope.game_function(scene.next_scene())
                 $scope.$apply();
-            },scene.scene_timeout);
-        }
-        
-        var all_game_containers = document.getElementsByClassName('game_text_container');
-        var last_element = all_game_containers[all_game_containers.length-1];
-        if(last_element !== undefined){
-            last_element.scrollIntoView();
-        }          
+            },2000);
+            
+            
+        }         
     }
 });
+
+        
+//        var all_game_containers = document.getElementsByClassName('game_text_container');
+//        var last_element = all_game_containers[all_game_containers.length-1];
+//        console.log(all_game_containers);
+//        console.log(last_element);
+//        if(last_element !== undefined){
+//            last_element.scrollIntoView();
+//        } 

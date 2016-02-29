@@ -8,11 +8,11 @@
 
 -->
 
-<button style="margin:15px;" class="btn btn-default" ng-click="start_game()">Add Number</button>
+<p class="btnStart" ng-click="start_game()">Start the Heist</p>
 
 <br>
 
-<p style="margin:15px;">Shots available: {{ bullets }}</p>
+<p class="displayBullets">Shots Available: {{ bullets }}</p>
 
 <br>
 
@@ -26,4 +26,5 @@
         <button ng-show="scene.choice_one_text" ng-click="game_function(scene.choice_one())">{{scene.choice_one_text}}</button>
         <button ng-show="scene.choice_two_text" ng-click="game_function(scene.choice_two())">{{scene.choice_two_text}}</button>
     </div>
+    <span id="{{ completed_scenes.length-1 }}"></span>
 </div>

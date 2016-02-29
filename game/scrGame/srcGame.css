@@ -4,15 +4,42 @@
     padding-right: 150px;
 }
 
+.btnStart
+{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    transform: rotate(-3deg);
+    margin-top: 35px;
+    margin-bottom: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+.btnStart:hover,
+.btnStart:active
+{
+    color: lightcoral;
+    text-shadow: 0 0 20px red;
+}
+
+.displayBullets{
+    color: white;
+}
+
 .game_text_container{
     height: 100px;
-/*    background: red;*/
 }
 
 .game_text{
     height: 85px;
     width: 100%;
-    background: yellow;
+    background: #4F433D;
+    border: 3px solid #241F1E;
+}
+
+.game_text p{
+    color: white;
+    padding-top: 10px;
 }
 
 /*starting from 600px and more*/

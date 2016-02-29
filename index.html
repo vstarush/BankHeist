@@ -9,6 +9,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
         <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
         
+        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+        
 <!--        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />-->
         
         <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" />
