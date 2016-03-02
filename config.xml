@@ -13,6 +13,8 @@
     
     <plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" spec="1.2.0" source="pgb" />
     
+    <preference name="orientation" value="landscape" />
+    
 </widget>
 
 
