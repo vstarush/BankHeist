@@ -44,5 +44,6 @@
         <script src="game/scrGame/scrGame.controller.js"></script>
         <script src="game/scrStart/scrStart.controller.js"></script>
         <script src="game/games/testGame.js"></script>
+        <script src="cordova.js"></script>
   </body>
 </html>
