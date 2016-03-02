@@ -1,3 +1,13 @@
+.btnGoToGame
+{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    transform: rotate(-3deg);
+    padding-top: 50%;
+    color: white;
+    cursor: pointer;
+}
+
 .game_screen{
 /*    background: blue;*/
     padding-left: 150px;
@@ -27,11 +37,11 @@
 }
 
 .game_text_container{
-    height: 100px;
+    height: 150px;
 }
 
 .game_text{
-    height: 85px;
+    height: 135px;
     width: 100%;
     background: #4F433D;
     border: 3px solid #241F1E;
