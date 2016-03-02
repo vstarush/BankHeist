@@ -7,6 +7,8 @@
     </author>
     <access origin="*" />
     
+    <icon src="game/images/icon.png" />
+    
     <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
     <false/>
     </gap:config-file>
