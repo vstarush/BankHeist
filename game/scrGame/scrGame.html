@@ -7,12 +7,15 @@
 
 
 -->
+<nav class="navbar navbar-fixed-top">
+  <p class="displayBullets">Shots Available: {{ bullets }}</p>
+</nav>
 
 <p class="btnStart" ng-click="start_game()">Start the Heist</p>
 
 <br>
 
-<p class="displayBullets">Shots Available: {{ bullets }}</p>
+
 
 <br>
 
@@ -29,14 +32,5 @@
     </div>
     
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<span id="{{ completed_scenes.length-1 }}"></span>
+
+<div class="scrollDownAnchor" id="{{ completed_scenes.length-1 }}"></div>

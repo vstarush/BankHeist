@@ -1,11 +1,16 @@
 .btnGoToGame
 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 60px;
     transform: rotate(-3deg);
-    padding-top: 50%;
-    color: white;
+    padding-top: 150px;
     cursor: pointer;
+}
+
+.btnGoToGame a
+{
+    color: white !important;
+    background: black;
 }
 
 .game_screen{
@@ -19,7 +24,7 @@
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     transform: rotate(-3deg);
-    margin-top: 35px;
+    margin-top: 70px;
     margin-bottom: 10px;
     color: red;
     cursor: pointer;
@@ -34,6 +39,7 @@
 
 .displayBullets{
     color: white;
+    padding-top: 10px;
 }
 
 .game_text_container{
@@ -50,6 +56,11 @@
 .game_text p{
     color: white;
     padding-top: 10px;
+}
+
+.scrollDownAnchor
+{
+    margin-top: 20%;
 }
 
 /*starting from 600px and more*/

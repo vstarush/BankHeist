@@ -3,7 +3,14 @@
 }
 
 body{
-    overflow-y: scroll;
-    background: #2B2625;
+    overflow-y:visible;
+    background: url(game/images/background.jpg);
+    background-position:center;
     text-align: center;
+}
+
+.navbar
+{
+    background: rgb(54,54,54);
+    min-height: 0px;
 }
