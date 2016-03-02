@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="io.github.rhildred.hellophonegap" version="0.0.1">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="vstarush.bankheist" version="0.0.1">
 
     <name>The Bank Heist</name>
     <author>
@@ -10,6 +10,8 @@
     <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
     <false/>
     </gap:config-file>
+    
+    <plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" spec="1.2.0" source="pgb" />
     
 </widget>
 
