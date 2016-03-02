@@ -56,8 +56,8 @@ app.factory('testGame',function($rootScope){
     
     var test_scene_gamble ={
         next_scene:function(){return 'action';},
-        scene_text:'What should they do?',
-        choice_one_text:'Kill that mutherfucker with 2 shots',
+        scene_text:'Make your choice:',
+        choice_one_text:'Kill that mutherfucker',
         choice_two_text:'Capture him with bear hands',
         gamble_border:8,
         bullets_price:3,
@@ -74,6 +74,7 @@ app.factory('testGame',function($rootScope){
      var gamble_result_scene = {
         scene_type:'result_scene',
         scene_text:'The moment is going',
+        gamble_result:null,
         next_scene_temp:null,
         next_scene:function(){return this.next_scene_temp;},
         set_scene_temp:function(result){this.next_scene_temp = result;},
@@ -91,7 +92,10 @@ app.factory('testGame',function($rootScope){
             }
             // Generates the random number
             var gamble = Math.floor(Math.random() * (13 - 1) + 1);
-
+        
+            gamble_result_scene.gamble_result = gamble;
+        
+            
             //Checks if we win or loose
             if(gamble>=border){
                 gamble_result_scene.next_scene_temp = win_scene;

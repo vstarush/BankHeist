@@ -23,11 +23,18 @@
     <div class="container game_text_container">
         <div class="game_text animated fadeInUp">
             <p>{{ scene.scene_text }}</p>
-            <p ng-show="scene.gamble_border"> This is a gamble border{{ scene.gamble_border }}</p>
-            <p ng-show="scene.scene_type ==='result_scene'">{{ animation_trigger }}</p>
+            <p ng-show="scene.gamble_border"><b>Result needed to win: {{ scene.gamble_border }}/12</b></p>
+            <p ng-show="scene.scene_type ==='result_scene'"><b>Your gamble result is: {{ scene.gamble_result }}/12</b></p>
             
-            <button ng-show="scene.choice_one_text" ng-click="game_function(scene.choice_one())">{{scene.choice_one_text}}</button>
-            <button ng-show="scene.choice_two_text" ng-click="game_function(scene.choice_two())">{{scene.choice_two_text}}</button>
+            <div class="btn btn-default btnChoice" ng-show="scene.choice_one_text" ng-click="game_function(scene.choice_one())">        
+                {{scene.choice_one_text}}
+                <p>
+                    Chance increase: {{scene.gamble_border - scene.bullets_price}}/12.
+                    <span ng-show="scene.bullets_price"> Price: {{ scene.bullets_price }} </span>
+                </p>
+                
+            </div>
+            <div class="btn btn-default btnChoice" ng-show="scene.choice_two_text" ng-click="game_function(scene.choice_two())">{{scene.choice_two_text}}</div>
         </div>
     </div>
     

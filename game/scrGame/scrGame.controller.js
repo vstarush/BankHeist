@@ -37,7 +37,7 @@ app.controller('scrGameController', function($rootScope,$scope,$location, $ancho
             setTimeout(function(){
                 $scope.game_function(scene.next_scene())
                 $scope.$apply();
-            },10000);
+            },1000);
         }
         else{
             setTimeout(function(){

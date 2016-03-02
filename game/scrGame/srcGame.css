@@ -44,23 +44,37 @@
 
 .game_text_container{
     height: 150px;
+    
 }
 
 .game_text{
     height: 135px;
     width: 100%;
-    background: #4F433D;
-    border: 3px solid #241F1E;
+    background: #161a1b;
+    border: 4px solid #14171c;
+    box-shadow: 0 -7px 25px 0px #546f93;
+    border-radius: 5px;
 }
 
 .game_text p{
     color: white;
-    padding-top: 10px;
+    padding-top: 5px;
+    margin-bottom: 3px;
+    
 }
 
 .scrollDownAnchor
 {
     margin-top: 20%;
+}
+
+.btnChoice
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    background: black !important;
+    color: red;
+    font-weight: bold;
 }
 
 /*starting from 600px and more*/
