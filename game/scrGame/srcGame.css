@@ -48,6 +48,7 @@
 }
 
 .game_text{
+    font-size: 15px;
     height: 135px;
     width: 100%;
     background: #161a1b;

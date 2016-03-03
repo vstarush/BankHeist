@@ -6,7 +6,7 @@ app.controller('scrGameController', function($rootScope,$scope,$location, $ancho
         
     // starts the game
     $scope.start_game = function(){
-        $scope.game_function(testGame.test_scene());
+        $scope.game_function(testGame.scene_1());
     };
 
     $scope.game_function = function(scene){
@@ -43,7 +43,7 @@ app.controller('scrGameController', function($rootScope,$scope,$location, $ancho
             setTimeout(function(){
                 $scope.game_function(scene.next_scene())
                 $scope.$apply();
-            },2000);
+            },4000);
             
             
         }         
